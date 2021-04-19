@@ -5,6 +5,7 @@ import java.time.LocalDate;
 // POJO - Plain Old Java Object 
 // Java Bean 
 // Semplice contenitore di dati - non svolge azioni
+
 public class Voto {
 	private String nome;
 	private int voto;

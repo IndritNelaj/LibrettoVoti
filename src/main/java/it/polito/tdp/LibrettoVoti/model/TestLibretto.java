@@ -23,5 +23,6 @@ public class TestLibretto {
 		Voto cercavoto= libretto.cercaCorso("Informatica");
 		System.out.println("il voto è : " + cercavoto.getVoto());
 		
+		
 	}
 }
