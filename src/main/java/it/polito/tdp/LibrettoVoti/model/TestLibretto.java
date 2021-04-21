@@ -21,8 +21,22 @@ public class TestLibretto {
 		System.out.println(librettoVenticinque);
 		
 		Voto cercavoto= libretto.cercaCorso("Informatica");
-		System.out.println("il voto è : " + cercavoto.getVoto());
+		System.out.println("il voto dell' esame "+cercavoto.getNome() +" è : " + cercavoto.getVoto());
 		
+		Voto cercavoto1= libretto.cercaCorso("Informatica");
+		System.out.println(cercavoto1);
 		
+		Voto cercavoto2= libretto.cercaCorso("Analisi 3");
+		System.out.println(cercavoto2);
+		
+		Voto chimica = libretto.cercaCorso("Chimica");
+		Voto chimicaDoppio = new Voto("Chimica",25,LocalDate.of(2019, 6, 17));
+		Voto chimicaConflitto = new Voto("Chimica",18,LocalDate.of(2019, 6, 17));
+	
+		System.out.println(chimica + " doppione di "+ chimicaDoppio + " -> " + libretto.esisteDuplicato(chimicaDoppio));
+		System.out.println(chimica + " doppione di "+ chimicaConflitto + " -> " + libretto.esisteDuplicato(chimicaConflitto));
+		
+		System.out.println(chimica + " in conflitto con "+ chimicaDoppio + " -> " + libretto.esisteConflitto(chimicaDoppio));
+		System.out.println(chimica + " in conflitto con "+ chimicaConflitto + " -> " + libretto.esisteConflitto(chimicaConflitto));
 	}
 }
